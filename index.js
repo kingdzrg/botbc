@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "²"
+var prefix = "K!"
 
 
 
 
 client.on("message", message => {
-    if (message.content.startsWith("²obc")) {
+    if (message.content.startsWith("K!obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -19,7 +19,7 @@ client.on("message", message => {
   });
 
 
-  var prefix = "²";
+  var prefix = "K!";
 
   client.on("message", message => {
   
@@ -42,7 +42,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("²avatar")) {
+if (message.content.startsWith("K!avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -62,7 +62,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('²adminbc')){
+if (message.content.startsWith('K!adminbc')){
 if(!message.author.id === '537675177677291530') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -74,7 +74,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === '²help')
+    if(msg.content === 'K!help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -83,15 +83,15 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "²help") {
+    if (message.content === "K!help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`** HELP
-       ²obc | لأرسال برود كاست للكل
-       ²bc  |  لأرسال برود كاست للأونلاين
-       ²invite | لدعوة البوت الي سيرفرك
-       ²support | سيرفر السبورت** `)
+       K!obc | لأرسال برود كاست للكل
+       K!bc  |  لأرسال برود كاست للأونلاين
+       K!invite | لدعوة البوت الي سيرفرك
+       K!support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -99,7 +99,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "²invite") {
+    if (message.content === "K!invite") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=647410082556149810&permissions=8&scope=bot`)
@@ -110,7 +110,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "²support") {
+    if (message.content === "K!support") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('❤سيرفر الدعم الفني', ` https://discord.gg/2MRGcDp `)
@@ -124,7 +124,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("²bot")) {
+    if (message.content.startsWith("K!bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -138,7 +138,7 @@ m.sendMessage(args)
             .addField('``Users``' ,`[ ${client.users.size} ]` , true)
             .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
-                  .addField('``My Prefix``' , `[²]` , true)
+                  .addField('``My Prefix``' , `[K!]` , true)
                   .addField('``My Language``' , `[ Java Script ]` , true)
                     })
 }
