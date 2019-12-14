@@ -146,7 +146,7 @@ m.sendMessage(args)
 
 
 const devs = ["537675177677291530"];
-const prefix = ["--"];
+const prefix = ["+"];
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
